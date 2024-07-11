@@ -1,12 +1,20 @@
-import { View, Text } from "react-native";
+import { View } from "react-native";
 import React from "react";
+import { StatusBar } from "expo-status-bar";
+import styled from "styled-components/native";
+import RootNavigation from "./src/screens/navigation/RootNavigation";
 
 const App = () => {
   return (
-    <View className="bg-pink-500 flex-1 justify-center items-center">
-      <Text className="text-white text-3xl font-semibold">WhiteBIT</Text>
-    </View>
+    <Container>
+      <StatusBar style="auto" />
+      <RootNavigation />
+    </Container>
   );
 };
 
 export default App;
+
+const Container = styled(View)`
+  flex: 1;
+`;
